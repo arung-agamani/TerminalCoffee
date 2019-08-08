@@ -1,14 +1,15 @@
 /*style pada halaman login*/
 body {background-color:rgb(236, 225, 212);
-    background-image: url("../Picture/Logo\ Terminal\ Coffee\ copy.png");
+    background-image: url("../Picture/3.png");
     background-repeat: no-repeat;
     background-position: 50% 3%;
-    background-size: 18%;}
+    background-size: 100%;
+}
 h1 {color:coral;}
 
 /*style box*/
 input[type=text]{
-    width : 30%;
+    width : 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -16,5 +17,39 @@ input[type=text]{
     outline: none;
 }
 input[type=text]:focus {
-    background-color: lightblue;
+    background-color: rgb(238, 216, 200);
 }  
+
+input[type=password]{
+    width : 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+input[type=password]:focus {
+    background-color: rgb(238, 216, 200);
+}  
+
+.loginBox{
+    position: fixed;
+    top: 35%;
+    left: 29%;
+}
+
+.button{
+    position: fixed;
+    bottom: 34%;
+    left: 46%;
+}
+.regisBox{
+    position: fixed;
+    top: 35%;
+    left: 29%;
+}
+.buttonRegis{
+    position: fixed;
+    bottom: 22%;
+    left: 46%;
+}
