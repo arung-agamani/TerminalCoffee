@@ -1,12 +1,28 @@
-var express = require('express');
+/**
+ * Terminal Coffee
+ * by C#
+ */
 
-const App = express();
+// Package Load
+const express = require('express');
 
-App.get('/', function (req, res) {
-    res.send('AAAAAAAAAAAAAAA');
-    console.log('GET request happened');
-});
+// Package Usage
+const app = express();
 
-App.listen(8000, function () {
+// Controller Declaration
+const GET_indexController = require('./controller/get/index');
+const GET_loginController = require('./controller/get/login');
+const GET_registerController = require('./controller/get/register');
+
+// GET Controller
+app.get('/', GET_indexController);
+app.get('/login', GET_loginController);
+app.get('/register', GET_registerController);
+
+
+// POST Controller
+
+// Server stuffs
+app.listen(4000, () => {
     console.log('Server udah jalan gan');
-});
+})
