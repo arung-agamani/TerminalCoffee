@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = (req, res) => {
-    res.send('REGISTER PAGE');    
+    res.sendFile(path.resolve('./views/register.html'));
 }

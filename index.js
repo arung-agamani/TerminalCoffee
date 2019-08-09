@@ -7,6 +7,8 @@
 // Package Load
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const expressSession = require('express-session');
 require('dotenv').config();
 
 // Const Declaration
@@ -22,12 +24,18 @@ mongoose.connect(mongo_url, { useNewUrlParser : true })
         console.log('Something went wrong : ', err);
     });
 
-// Controller Declaration
+// GET Controller Declaration
 const GET_indexController = require('./controller/get/index');
 const GET_loginController = require('./controller/get/login');
 const GET_registerController = require('./controller/get/register');
+const GET_logoutController = require('./controller/get/logout');
 
+// POST Controller Declaration
 const POST_loginController = require('./controller/post/login');
+const POST_registerController = require('./controller/post/register');
+
+// Middlewares
+const sessionExtender = require('./sessionExtend');
 
 
 // App Set
@@ -35,14 +43,23 @@ app.set('views', './views');
 
 // App Use
 app.use(express.static('./views'));
+app.use(bodyParser.urlencoded({ extended : true }));
+app.use(expressSession({
+    secret : 'awoo 5 6 7 O 9',
+    cookie : {
+        maxAge : 600000,
+    }
+}));
 
 // GET Controller
-app.get('/', GET_indexController);
+app.get('/', sessionExtender, GET_indexController);
 app.get('/login', GET_loginController);
 app.get('/register', GET_registerController);
+app.get('/logout', GET_logoutController);
 
 // POST Controller
 app.post('/login', POST_loginController);
+app.post('/register', POST_registerController);
 
 // Server stuffs
 app.listen(4000, () => {
