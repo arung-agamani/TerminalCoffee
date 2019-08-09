@@ -13,7 +13,7 @@
         <form action="/order" method="post">
             <% for (var i = 0; i < menuList.length; i++) { %>
                 <p><%= menuList[i].name %></p>
-                <input type="text" name="<%= menuList[i].name %>" style="visibility: hidden">
+                <input type="text" name="item-<%= i %>" value="<%= menuList[i].name %>" style="visibility: hidden">
                 <br>
                 <p><%= menuList[i].description %></p>
                 <br>
