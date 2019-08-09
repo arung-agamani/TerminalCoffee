@@ -73,6 +73,6 @@ app.post('/tambahMenu', POST_tambahMenuController);
 app.post('/order', POST_orderMenuController);
 
 // Server stuffs
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('Server udah jalan gan');
 })
