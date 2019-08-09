@@ -35,6 +35,19 @@
     <div class='menu' style="position: relative; border: 10px black; padding: 20px; margin: 30px">
         <form action="/order" method="post">
             <% for (var i = 0; i < menuList.length; i++) { %>
+<<<<<<< HEAD
+                <p><%= menuList[i].name %></p>
+                <input type="text" name="item-<%= i %>" value="<%= menuList[i].name %>" style="visibility: hidden">
+                <br>
+                <p><%= menuList[i].description %></p>
+                <br>
+                <p>Rp.<%= menuList[i].price %></p>
+                <br>
+                <label>Jumlah</label>
+                <p onclick="subsItem('amount-<%= i %>')">-</p>
+                <input type="text" name="amount-<%= i %>" id="amount-<%= i %>" placeholder="0">
+                <p onclick="addItem('amount-<%= i %>')">+</p>
+=======
                 <div class="grid-container">
                     <div class="grid-item">
                         <p style="width: 320px; padding: 10px; margin: 0px; background-color: darkgray; font-family: Shadows Into Light; font-size: 20px; border-radius: 25px"><%= menuList[i].name %></p>
@@ -52,6 +65,7 @@
                     <div class="grid-item"></div>
                     <div class="grid-item"></div>
                 </div>
+>>>>>>> c8764ca4210962a8a7b3481697ccb1c8b1742e95
                 <hr>
             <% } %>
             <hr>

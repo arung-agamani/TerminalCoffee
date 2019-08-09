@@ -31,6 +31,7 @@ const GET_registerController = require('./controller/get/register');
 const GET_logoutController = require('./controller/get/logout');
 const GET_orderController = require('./controller/get/order');
 const GET_tambahMenuController = require('./controller/get/tambahMenu');
+const GET_terkonfirmasiController = require('./controller/get/terkonfirmasi');
 
 // POST Controller Declaration
 const POST_loginController = require('./controller/post/login');
@@ -63,6 +64,7 @@ app.get('/register', GET_registerController);
 app.get('/logout', GET_logoutController);
 app.get('/order', GET_orderController);
 app.get('/tambahMenu', GET_tambahMenuController);
+app.get('/terkonfirmasi', GET_terkonfirmasiController);
 
 // POST Controller
 app.post('/login', POST_loginController);
