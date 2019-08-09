@@ -53,3 +53,10 @@ input[type=password]:focus {
     bottom: 22%;
     left: 46%;
 }
+
+.menu{
+    position: relative;
+    border: 10px black;
+    padding: 20px;
+    margin: 30px;
+}
