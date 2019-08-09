@@ -5,24 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pesan Makanan - Terminal Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url('../Picture/2.png');
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+        }
+        .grid-item{
+
+        }
+    </style>
 </head>
 <body>
-    <h1>PESAN MAKANAN</h1>
+    <h1 style="font-family: Pacifico; color: white">PESAN MAKANAN</h1>
     <hr>
     <div class='menu'>
         <form action="/order" method="post">
             <% for (var i = 0; i < menuList.length; i++) { %>
-                <p><%= menuList[i].name %></p>
-                <input type="text" name="item-<%= i %>" value="<%= menuList[i].name %>" style="visibility: hidden">
-                <br>
-                <p><%= menuList[i].description %></p>
-                <br>
-                <p>Rp.<%= menuList[i].price %></p>
-                <br>
-                <label>Jumlah</label>
-                <p onclick="subsItem('amount-<%= i %>')">-</p>
-                <input type="text" name="amount-<%= i %>" id="amount-<%= i %>" placeholder="0">
-                <p onclick="addItem('amount-<%= i %>')">+</p>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <p style="width: 320px; padding: 10px; margin: 0px; background-color: darkgray; font-family: Shadows Into Light; font-size: 20px; border-radius: 25px"><%= menuList[i].name %></p>
+                        <input type="text" name="item-<%= i %>" value="<%= menuList[i].name %>" style="visibility: hidden">
+                        <p style="width: 300px; padding: 20px; margin: 0px; background-color: darksalmon; font-family: Indie Flower; font-size: 20px; border-top-left-radius: 25px; border-top-right-radius: 25px"><%= menuList[i].description %></p>
+                        <p style="width: 320px; padding: 10px; margin: 0px; background-color: greenyellow; font-family: Architects Daughter; font-size: 20px; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px">Rp.<%= menuList[i].price %></p>
+                    </div>
+                    <div class="grid-item">
+                        <p onclick="addItem('amount-<%= i %>')" style="background-color: white; width: 20px; border-radius: 25px; text-align: center">+</p>
+                        <input type="text" name="amount-<%= i %>" id="amount-<%= i %>" placeholder="0" style="width: 20px; text-align: center">
+                        <p onclick="subsItem('amount-<%= i %>')" style="background-color: white; width: 20px; border-radius: 25px; text-align: center">-</p>
+                    </div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                </div>
                 <hr>
             <% } %>
             <hr>
