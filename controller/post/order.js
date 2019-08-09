@@ -20,15 +20,6 @@ module.exports = (req, res) => {
         };
         OrderArray.push(obj);
     }
-    Queue.create({
-        username : req.session.username,
-        order : OrderArray,
-    }, (err, queueRes) => {
-        if (err) {
-            console.log('Error occured when pushing queue order : ', err);
-            return res.redirect('/order');
-        }
-        console.log('Successfully adding new order!');
-        res.redirect('/');
-    });
+    req.orderPesanan = OrderArray;
+    res.render('konfirmasi', { OrderArray });
 }

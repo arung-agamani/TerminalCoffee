@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konfirmasi Pesanan - Terminal Coffee</title>
+</head>
+<body>
+    <h1>Konfirmasi Pesanan</h1>
+    <hr>
+    <h3>Anda telah memesan <%= OrderArray.length %> menu</h3>
+    <% for (var i = 0; i < OrderArray.length; i++) { %>
+        <p>Menu : <%= OrderArray[i].name %></p>
+        <p>Jumlah : <%= OrderArray[i].amount %></p>
+        <hr>
+    <% } %>
+    <p>Konfirmasi Pesanan?</p>
+    <button onclick="window.location.href='/order'">No</button>
+    <button onclick="window.location.href='/terkonfirmasi'">Yes</button>
+</body>
+</html>
