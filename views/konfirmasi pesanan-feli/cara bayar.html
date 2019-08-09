@@ -54,20 +54,23 @@
         Konfirmasi Pesanan
 
     </p>
+    <% for (var i = 0; i < OrderArray.length; i++) { %>
     <hr style="width: 28%;">
+    
     <p style="font-family:Third;font-size:25px;background-color:darksalmon;color:black;padding: 15px 25px;display:block;text-decoration:none;position:relative; width:180px;margin:auto;text-align: center;">
-        SAYA 
+            <%= OrderArray[i].name %>
     </p>
     <p style="font-family:Third;font-size:18px;background-color:bisque;color:black;padding: 15px 25px;display:block;text-decoration:none;position:relative; width:120px;height: 15px;margin:5px auto;text-align: center;">
-        SAYA 
+            <%= OrderArray[i].amount %> 
     </p>
+    <% } %>
     <p style="text-align:center;font-family: SecFont;font-size: 25px;">
         Konfirmasi pesanan?
     </p>
-    <a href="#" style="position:relative; width:100px;font-family: SecFont;font-size: 18px;">
+    <a href="/terkonfirmasi" style="position:relative; width:100px;font-family: SecFont;font-size: 18px;">
         Yes
     </a>
-    <a href="#" style="position:relative; width:100px;font-family: SecFont;font-size: 18px;">
+    <a href="/order" style="position:relative; width:100px;font-family: SecFont;font-size: 18px;">
         No
     </a>
     
