@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register Page</title>
-</head>
-<body>
-    <h1>Register Page</h1>
-    <hr>
-    <form action="/register" method="post">
-        <label>Full Name</label>
-        <input type="text" name="fullName">
-        <label>Username</label>
-        <input type="text" name="username">
-        <label>Email</label>
-        <input type="email" name="email">
-        <label>Password</label>
-        <input type="password" name="password">
-        <button type="submit">Submit</button>
-    </form>
-</body>
+<html>
+<style>
+.static {
+  position: relative;
+  top: 18px;
+  left: 30px;
+}
+</style>
+    <head>
+
+        <!--Memuat stylelogin-->
+        <link rel="stylesheet" href="../Login/stylelogin.css">
+        <!--Memuat font-->
+        <link href='https://fonts.google.com/specimen/Libre+Caslon+Text' rel='stylesheet'>
+        <!--Ikon pada Title-->
+        <link rel="icon" type="image/png" href="../Picture/Logo Terminal Coffee copy.png">
+        <title>
+            Register
+        </title>
+
+    </head>
+
+    <body>
+        <img src="../Picture/Logo Terminal Coffee copy.png" style="width: 250px; height: 250px; position: relative; left: 41.5%">
+        <div class="regisBox">
+                <form action="/register" method="post">
+
+                <pre>
+                    <label style="color: white; font-family: Libre Caslon Text; font-size: 20px">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" value="">
+                    <label style="color: white; font-family: Libre Caslon Text; font-size: 20px ">User ID</label>
+                    <input type="text" id="user" name="username" value="">
+                    <label style="color: white; font-family: Libre Caslon Text; font-size: 20px ">Email</label>
+                    <input type="texts" id="email" name="email" value="">
+                    <label style="color: white; font-family: Libre Caslon Text; font-size: 20px ">Password</label>
+                    <input type="password" id="password" name="password" value="">
+                </pre>
+                <div class="buttonRegis">
+                        <button class="static"; style="font-family: Libre Caslon Text; font-size: 20px; width: 100px; height: 40px">Register</button>
+                    </div>
+            </form>
+        </div>
+        
+
+
+    </body>
 </html>
