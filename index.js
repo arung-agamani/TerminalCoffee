@@ -36,6 +36,7 @@ const GET_tambahMenuController = require('./controller/get/tambahMenu');
 const POST_loginController = require('./controller/post/login');
 const POST_registerController = require('./controller/post/register');
 const POST_tambahMenuController = require('./controller/post/tambahMenu');
+const POST_orderMenuController = require('./controller/post/order');
 
 // Middlewares
 const sessionExtender = require('./sessionExtend');
@@ -67,6 +68,7 @@ app.get('/tambahMenu', GET_tambahMenuController);
 app.post('/login', POST_loginController);
 app.post('/register', POST_registerController);
 app.post('/tambahMenu', POST_tambahMenuController);
+app.post('/order', POST_orderMenuController);
 
 // Server stuffs
 app.listen(4000, () => {

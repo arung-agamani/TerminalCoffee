@@ -10,15 +10,32 @@
     <h1>PESAN MAKANAN</h1>
     <hr>
     <div class='menu'>
-        <% for (var i = 0; i < menuList.length; i++) { %>
-            <p><%= menuList[i].name %></p>
-            <br>
-            <p><%= menuList[i].description %></p>
-            <br>
-            <p>Rp.<%= menuList[i].price %></p>
-            <br>
+        <form action="/order" method="post">
+            <% for (var i = 0; i < menuList.length; i++) { %>
+                <p><%= menuList[i].name %></p>
+                <input type="text" name="<%= menuList[i].name %>" style="visibility: hidden">
+                <br>
+                <p><%= menuList[i].description %></p>
+                <br>
+                <p>Rp.<%= menuList[i].price %></p>
+                <br>
+                <label>Jumlah</label>
+                <p onclick="subsItem('amount-<%= i %>')">-</p>
+                <input type="text" name="amount-<%= i %>" id="amount-<%= i %>" placeholder="0">
+                <p onclick="addItem('amount-<%= i %>')">+</p>
+                <hr>
+            <% } %>
             <hr>
-        <% } %>
+            <button type="submit">PESAN</button>
+        </form>
     </div>
+    <script>
+        function addItem(itemName) {
+            document.getElementById(itemName).value++;
+        }
+        function subsItem(itemName) {
+            document.getElementById(itemName).value--;
+        }
+    </script>
 </body>
 </html>
