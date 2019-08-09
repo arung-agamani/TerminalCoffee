@@ -29,10 +29,13 @@ const GET_indexController = require('./controller/get/index');
 const GET_loginController = require('./controller/get/login');
 const GET_registerController = require('./controller/get/register');
 const GET_logoutController = require('./controller/get/logout');
+const GET_orderController = require('./controller/get/order');
+const GET_tambahMenuController = require('./controller/get/tambahMenu');
 
 // POST Controller Declaration
 const POST_loginController = require('./controller/post/login');
 const POST_registerController = require('./controller/post/register');
+const POST_tambahMenuController = require('./controller/post/tambahMenu');
 
 // Middlewares
 const sessionExtender = require('./sessionExtend');
@@ -40,6 +43,7 @@ const sessionExtender = require('./sessionExtend');
 
 // App Set
 app.set('views', './views');
+app.set('view engine', 'ejs');
 
 // App Use
 app.use(express.static('./views'));
@@ -56,10 +60,13 @@ app.get('/', sessionExtender, GET_indexController);
 app.get('/login', GET_loginController);
 app.get('/register', GET_registerController);
 app.get('/logout', GET_logoutController);
+app.get('/order', GET_orderController);
+app.get('/tambahMenu', GET_tambahMenuController);
 
 // POST Controller
 app.post('/login', POST_loginController);
 app.post('/register', POST_registerController);
+app.post('/tambahMenu', POST_tambahMenuController);
 
 // Server stuffs
 app.listen(4000, () => {

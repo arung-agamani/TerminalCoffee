@@ -5,6 +5,9 @@ const FoodSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
+    description : {
+        type : String,
+    },
     price : {
         type : Number,
         required : true,
@@ -12,6 +15,7 @@ const FoodSchema = new mongoose.Schema({
     stock : {
         type : Number,
         required : true,
+        default : 10,
     }
 });
 
