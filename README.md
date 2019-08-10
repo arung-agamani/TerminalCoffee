@@ -1,4 +1,4 @@
-# Project Title
+# Terminal Coffee Project
 
 Project ini dibuat untuk membantu perusahaan Terminal Coffee yang memiliki beberapa masalah sehingga kami membuat sebuah website sebagai untuk beberapa masalah tersebut. Website kami memudahkan pelanggan Terminal Coffee untuk membeli makanan dan minuman Terminal Coffee.
 
@@ -47,24 +47,40 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
  **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+ 
 **Vhydie Gilang** - *
+
 **Felicia Gojali** - *Frontend* - [feliciagojali] (https://github.com/feliciagojali)
+
 **Muhammad Firas** - *Frontend* - [mfiras1920] (https://github.com/arung-agamani/TerminalCoffee/commits?author=mfiras1920)
+
 **Cynthia Athena** - *
+
 **Aufa Fadhlurohman** - *
+
 **Muhammad Ayyub** - *
+
 **Hengky Surya** - *Frontend, revisi laporan* - [hengkysuryaa] - (https://github.com/hengkysuryaa)
+
 **Arung Agamani** - *Backend, Frontend* - [arung-agamani] (https://github.com/arung-agamani) 
+
 **Taufiq Husada** - *
+
 **Lionnarta Savirandy** - *Frontend* - [Lionnarta] - (https://github.com/Lionnarta)
-**Faris Rizki** - *
+
+**Faris Rizki** - *Workshop, Initial Concept* - [darkGrimoire] - (https://github.com/darkgrimoire)
+
 **Fakhrurrida Clarendia** - *
+
 **Ayutari Dian Putri** - *
+
 **Valentinus Devin** - *Frontend* - [dvnvln] - (https://github.com/arung-agamani/TerminalCoffee/commits?author=dvnvln)
+
 **Radhinansyah Hemsa** - *Membuat PPT*
+
 **Muhammad Ziad** - *
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/arung-agamani/TerminalCoffee/contributors) who participated in this project.
 
 ## License
 
