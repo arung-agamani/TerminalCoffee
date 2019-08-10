@@ -22,7 +22,9 @@ Download, buka installer, install!
 2. setelah module terinstall semua, buat file ".env" di dalam folder project tadi. File ini tidak memiliki nama apapun, hanya memiliki ekstensi file .env
 3. Copy teks ini ke dalam file .env tersebut 
 
-MONGO_URL=mongodb+srv://harukaShiroyuki:Jaeputucangkir@aniichanbot-cluster-y0f22.mongodb.net/TerminalCoffee?retryWrites=true
+MONGO_URL=mongodb+srv://[username]:[password]@aniichanbot-cluster-y0f22.mongodb.net/TerminalCoffee?retryWrites=true
+
+[username] dan [password] dapat anda peroleh melalui private message kepada repository owner
 
 4. save semua, dan jalankan server melalui terminal dengan perintah "node index"
 
